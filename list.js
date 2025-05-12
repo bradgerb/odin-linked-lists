@@ -4,6 +4,22 @@ class LinkedList {
     this.size = 0;
     }
 
+    append(value) {
+        let currentNode = this.head;
+
+        if (this.head === null) {
+            this.prepend(value);
+        } else {
+
+        while (currentNode.next !== null) {
+            currentNode = currentNode.next;
+        }
+        currentNode.next = new Node(value, null);
+        
+        this.size++;
+        }
+    }
+
     prepend(value) {
         const newNode = new Node(value, this.head);
         this.head = newNode;
@@ -19,6 +35,7 @@ class Node {
 }
 
 const testList = new LinkedList();
-testList.prepend(10);
-testList.prepend(20);
+testList.append(10);
+testList.append(20);
+
 console.log(testList);
