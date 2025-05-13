@@ -33,6 +33,19 @@ class LinkedList {
     head() { 
         return this.head
     }
+
+    tail() {
+        return this.head
+
+        // let currentNode = this.head;
+        // console.log(currentNode);
+        // return currentNode
+
+        // while (currentNode.next !== null) {
+        //     currentNode = currentNode.next;
+        // }
+        // return currentNode
+    }
 }
 
 class Node {
@@ -45,7 +58,9 @@ class Node {
 const testList = new LinkedList();
 testList.prepend(10);
 testList.append(20);
+testList.append(30);
+testList.prepend(0);
 
-console.log(testList);
-console.log(testList.size);
-console.log(testList.head);
+// console.log(testList);
+// console.log(testList.size);
+console.log(testList.tail);
