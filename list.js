@@ -89,6 +89,20 @@ class LinkedList {
 
         return isTrue
     }
+
+    find(value) {
+        let index;
+        let currentNode = this.head;
+
+            for (let i = 0; i < this.length; i++){
+                if (currentNode.value === value){
+                    index = i;
+                }
+                currentNode = currentNode.next;
+            }
+        
+        return index
+    }
 }
 
 class Node {
@@ -111,5 +125,6 @@ testList.prepend(0);
 // testList.pop();
 // testList.pop();
 // console.log(testList);
-console.log(testList.contains(10));
-console.log(testList.contains(4));
+// console.log(testList.contains(10));
+// console.log(testList.contains(4));
+console.log(testList.find(20));
