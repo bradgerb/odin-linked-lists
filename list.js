@@ -75,6 +75,20 @@ class LinkedList {
             this.length --;
         }
     }
+
+    contains(value) {
+        let isTrue = false
+        let currentNode = this.head;
+
+        while (currentNode !== null) {
+            if (currentNode.value === value){
+                isTrue = true;
+            }
+            currentNode = currentNode.next;
+        }
+
+        return isTrue
+    }
 }
 
 class Node {
@@ -89,12 +103,13 @@ testList.prepend(10);
 testList.append(20);
 testList.append(30);
 testList.prepend(0);
-
 // console.log(testList);
 // console.log(testList.size());
 // console.log(testList.getHead());
 // console.log(testList.getTail());
 // console.log(testList.at(2));
-testList.pop();
-testList.pop();
-console.log(testList);
+// testList.pop();
+// testList.pop();
+// console.log(testList);
+console.log(testList.contains(10));
+console.log(testList.contains(4));
