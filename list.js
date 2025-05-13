@@ -45,6 +45,16 @@ class LinkedList {
 
         return currentNode
     }
+
+    at(index) {
+        let currentNode = this.head;
+
+        for (let i = 0; i < index; i++) {
+            currentNode = currentNode.next;
+        }
+
+        return currentNode
+    }
 }
 
 class Node {
@@ -60,7 +70,8 @@ testList.append(20);
 testList.append(30);
 testList.prepend(0);
 
-console.log(testList);
-console.log(testList.size());
-console.log(testList.getHead());
-console.log(testList.getTail());
+// console.log(testList);
+// console.log(testList.size());
+// console.log(testList.getHead());
+// console.log(testList.getTail());
+console.log(testList.at(2));
