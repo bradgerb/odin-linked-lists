@@ -124,20 +124,13 @@ class Node {
     }
 }
 
-const testList = new LinkedList();
-testList.prepend(10);
-testList.append(20);
-testList.append(30);
-testList.prepend(0);
-// console.log(testList);
-// console.log(testList.size());
-// console.log(testList.getHead());
-// console.log(testList.getTail());
-// console.log(testList.at(2));
-// testList.pop();
-// testList.pop();
-// console.log(testList);
-// console.log(testList.contains(10));
-// console.log(testList.contains(4));
-// console.log(testList.find(20));
-console.log(testList.toString());
+const list = new LinkedList();
+
+list.append("dog");
+list.append("cat");
+list.append("parrot");
+list.append("hamster");
+list.append("snake");
+list.append("turtle");
+
+console.log(list.toString());
