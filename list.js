@@ -103,6 +103,18 @@ class LinkedList {
         
         return index
     }
+
+    toString() {
+        let currentNode = this.head;
+        let string = '';
+
+        while (currentNode !== null) {
+            string += `( ${currentNode.value} ) -> `;
+            currentNode = currentNode.next;
+        }
+        string += 'null';
+        return string
+    }
 }
 
 class Node {
@@ -127,4 +139,5 @@ testList.prepend(0);
 // console.log(testList);
 // console.log(testList.contains(10));
 // console.log(testList.contains(4));
-console.log(testList.find(20));
+// console.log(testList.find(20));
+console.log(testList.toString());
